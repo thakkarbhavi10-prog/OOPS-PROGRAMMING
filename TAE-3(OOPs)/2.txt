@@ -1,0 +1,29 @@
+import java.util.*;
+
+class Book {
+    String title, author, ISBN;
+
+    Book(String t, String a, String i) {
+        title = t;
+        author = a;
+        ISBN = i;
+    }
+}
+
+class Library {
+    ArrayList<Book> books = new ArrayList<>();
+
+    void addBook(Book b) {
+        books.add(b);
+    }
+
+    void removeBook(String isbn) {
+        books.removeIf(book -> book.ISBN.equals(isbn));
+    }
+
+    void display() {
+        for (Book b : books) {
+            System.out.println(b.title + " " + b.author + " " + b.ISBN);
+        }
+    }
+}

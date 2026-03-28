@@ -1,0 +1,19 @@
+abstract class Employee {
+    String name;
+    int id;
+    double salary;
+
+    abstract double calculateBonus();
+}
+
+class Manager extends Employee {
+    double calculateBonus() {
+        return 0.2 * salary;
+    }
+}
+
+class Developer extends Employee {
+    double calculateBonus() {
+        return 0.1 * salary + 5000;
+    }
+}

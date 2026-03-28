@@ -1,0 +1,7 @@
+class Bank {
+    final double interestRate = 5.0;
+
+    double calculateInterest(double amount) {
+        return amount * interestRate / 100;
+    }
+}
